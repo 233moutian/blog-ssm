@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aode.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.aode.model.User">
+        <id column="u_id" property="u_id" jdbcType="VARCHAR" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="class_name" property="className" jdbcType="VARCHAR" />
+        <result column="department" property="department" jdbcType="VARCHAR" />
+        <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+        <result column="date" property="date" jdbcType="VARCHAR" />
+    </resultMap>
+    <parameterMap type="java.util.Map" id="getPageBean">
+        <parameter property="pageOffset" mode="IN" jdbcType="INTEGER"/>
+        <parameter property="size" mode="IN" jdbcType="INTEGER"/>
+        <parameter property="searchText" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="sort" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="order" mode="IN" jdbcType="VARCHAR"/>
+    </parameterMap>
+    <sql id="select">
+        u_id,
+        name ,
+        phone_number,
+        email,
+        class_name,
+        department,
+        introduction,
+        date
+    </sql>
+    <select id="selectAllUser" parameterMap="getPageBean" resultMap="BaseResultMap">
+        SELECT <include refid="select" />
+        FROM gw_user
+        <if test="searchText !=null">
+            WHERE  name LIKE #{searchText}
+            OR phone_number LIKE #{searchText} OR  email LIKE #{searchText}
+            OR class_name LIKE #{searchText} OR department LIKE #{searchText}
+        </if>
+        <if test="sort != null">
+            ORDER BY ${sort} ${order}
+        </if>
+        limit #{pageOffset},#{size}
+    </select>
+    <select id="countAll" parameterMap="getPageBean" resultType="int">
+        SELECT count(u_id)
+        FROM gw_user
+        <if test="searchText !=null">
+            WHERE  name LIKE #{searchText}
+            OR phone_number LIKE #{searchText} OR  email LIKE #{searchText}
+            OR class_name LIKE #{searchText} OR department LIKE #{searchText}
+        </if>
+        <if test="sort != null">
+            ORDER BY #{sort} #{order}
+        </if>
+    </select>
+    <update id="updateInfo" parameterType="com.aode.model.User">
+        UPDATE
+        gw_user
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="className != null">
+                class_name = #{className},
+            </if>
+            <if test="phoneNumber != null">
+                phone_number = #{phoneNumber},
+            </if>
+            <if test="department != null">
+                department = #{department},
+            </if>
+            <if test="introduction != null">
+                introduction = #{introduction},
+            </if>
+            <if test="date != null">
+                date = #{date},
+            </if>
+        </set>
+        WHERE u_id = #{u_id};
+    </update>
+</mapper>
