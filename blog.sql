@@ -18,8 +18,8 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 -- Table structure for `gw_admin`
 -- ----------------------------
-DROP TABLE IF EXISTS `gw_admin`;
-CREATE TABLE `gw_admin` (
+DROP TABLE IF EXISTS `blog_admin`;
+CREATE TABLE `blog_admin` (
   `a_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `account` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
@@ -32,13 +32,13 @@ CREATE TABLE `gw_admin` (
 -- ----------------------------
 -- Records of gw_admin
 -- ----------------------------
-INSERT INTO `gw_admin` VALUES ('10', 'llssz', '56a0281fd65d73f05cedd7d94bb561ee', 'lz', '', '');
+INSERT INTO `blog_admin` VALUES ('10', 'llssz', '56a0281fd65d73f05cedd7d94bb561ee', 'lz', '', '');
 
 -- ----------------------------
 -- Table structure for `gw_user`
 -- ----------------------------
-DROP TABLE IF EXISTS `gw_user`;
-CREATE TABLE `gw_user` (
+DROP TABLE IF EXISTS `blog_user`;
+CREATE TABLE `blog_user` (
   `u_id` varchar(255) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `sex` varchar(255) DEFAULT NULL,
