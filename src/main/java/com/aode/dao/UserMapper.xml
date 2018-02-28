@@ -30,7 +30,7 @@
     </sql>
     <select id="selectAllUser" parameterMap="getPageBean" resultMap="BaseResultMap">
         SELECT <include refid="select" />
-        FROM gw_user
+        FROM blog_user
         <if test="searchText !=null">
             WHERE  name LIKE #{searchText}
             OR phone_number LIKE #{searchText} OR  email LIKE #{searchText}
@@ -43,7 +43,7 @@
     </select>
     <select id="countAll" parameterMap="getPageBean" resultType="int">
         SELECT count(u_id)
-        FROM gw_user
+        FROM blog_user
         <if test="searchText !=null">
             WHERE  name LIKE #{searchText}
             OR phone_number LIKE #{searchText} OR  email LIKE #{searchText}
@@ -55,7 +55,7 @@
     </select>
     <update id="updateInfo" parameterType="com.aode.model.User">
         UPDATE
-        gw_user
+        blog_user
         <set>
             <if test="name != null">
                 name = #{name},

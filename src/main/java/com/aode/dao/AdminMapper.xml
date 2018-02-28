@@ -16,11 +16,11 @@
         <parameter property="order" mode="IN" jdbcType="VARCHAR"/>
     </parameterMap>
     <select id="login" resultMap="BaseResultMap" parameterType="com.aode.model.Admin">
-        SELECT a_id,account,password,name FROM gw_admin where account = #{account} and password = #{password};
+        SELECT a_id,account,password,name FROM blog_admin where account = #{account} and password = #{password};
     </select>
     <select id="selectAllAdmin" parameterMap="getPageBean" resultMap="BaseResultMap">
         SELECT a.a_id,a.account,a.name,a.email,a.phone_number
-        FROM gw_admin a
+        FROM blog_admin a
         <if test="searchText !=null">
             WHERE  a.account LIKE #{searchText}
             OR a.name LIKE #{searchText} OR  a.email LIKE #{searchText}
@@ -33,7 +33,7 @@
     </select>
     <select id="countAll" parameterMap="getPageBean" resultType="int">
         SELECT count(*)
-        FROM gw_admin a
+        FROM blog_admin a
         <if test="searchText !=null">
             WHERE  a.account LIKE #{searchText}
             OR a.name LIKE #{searchText} OR  a.email LIKE #{searchText}

@@ -7,7 +7,7 @@ import javax.persistence.Table;
  * Created by 黄柏樟 on 2016/3/8.
  * @Explain: 管理员类
  */
-@Table(name = "gw_admin")
+@Table(name = "blog_admin")
 public class Admin {
     @Id
     private Long a_id ;
