@@ -50,15 +50,18 @@
     <div class="container-fluid main-nav clearfix">
         <div class="nav-collapse">
             <ul class="nav">
-                <li>
-                    <a href="${pageContext.request.contextPath}/admin/index" id="control_page"><span aria-hidden="true" class="icon-home"></span>控制台</a>
-                </li>
+                <%--<li>
+                    <a href="${pageContext.request.contextPath}/admin/admin/index" id="control_page"><span aria-hidden="true" class="icon-home"></span>控制台</a>
+                </li>--%>
                 <li ><a href="${pageContext.request.contextPath}/admin/admin/list" id="admin_page">
                     <span aria-hidden="true" class="icon-user "  ></span>管理员</a>
                 </li>
-                <li ><a href="${pageContext.request.contextPath}/admin/user/list" id="user_page">
-                    <span aria-hidden="true" class="icon-group "></span>报名管理</a>
+                <li ><a href="${pageContext.request.contextPath}/admin/blog/list" id="blog_page">
+                    <span aria-hidden="true" class="icon-group "></span>博客管理</a>
                 </li>
+                    <li ><a href="${pageContext.request.contextPath}/admin/comment/list" id="comment_page">
+                        <span aria-hidden="true" class="icon-group "></span>评论管理</a>
+                    </li>
             </ul>
         </div>
     </div>

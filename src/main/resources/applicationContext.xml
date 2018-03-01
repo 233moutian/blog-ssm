@@ -17,7 +17,7 @@
         >
 
     <!-- 自动扫描包 ,将带有注解的类 纳入spring容器管理 -->
-    <context:component-scan base-package="com.aode"/>
+    <context:component-scan base-package="com.blog"/>
     <task:executor id="executor" pool-size="5" />
     <task:scheduler id="scheduler" pool-size="10" />
     <task:annotation-driven executor="executor" scheduler="scheduler" />
@@ -70,7 +70,7 @@
           p:mapperLocations="classpath:com/aode/dao/*Mapper.xml"/>
 
     <!-- spring与mybatis整合配置，扫描所有dao -->
-    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer" p:basePackage="com.aode.dao"
+    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer" p:basePackage="com.blog.dao"
           p:sqlSessionFactoryBeanName="sqlSessionFactory"/>
 
     <!-- 对dataSource 数据源进行事务管理 -->
@@ -94,7 +94,7 @@
 
     <!-- 事务 aop 配置 -->
     <aop:config>
-        <aop:pointcut id="serviceMethods" expression="execution(* com.aode.service..*(..))"/>
+        <aop:pointcut id="serviceMethods" expression="execution(* com.blog.service..*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods"/>
     </aop:config>
 

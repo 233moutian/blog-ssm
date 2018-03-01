@@ -5,7 +5,7 @@ pageEncoding="UTF-8"%>
 <html>
 <head>
     <title>
-      奥德 后台管理- 首页
+      博客 后台管理- 首页
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">

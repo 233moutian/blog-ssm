@@ -1,9 +1,9 @@
 package dao;
 
-import com.aode.dao.AdminMapper;
-import com.aode.model.Admin;
-import com.aode.test.TestSupport;
-import com.aode.util.Encrypt;
+import com.blog.dao.AdminMapper;
+import com.blog.model.Admin;
+import com.blog.test.TestSupport;
+import com.blog.util.Encrypt;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

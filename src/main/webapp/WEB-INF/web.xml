@@ -115,7 +115,7 @@
     </listener>
     <!--修复数据  图片缓存清理-->
     <listener>
-        <listener-class>com.aode.listener.CleanListener</listener-class>
+        <listener-class>com.blog.listener.CleanListener</listener-class>
     </listener>
     <!-- druid监控页面，使用${pageContext.request.contextPath}/druid/index.html访问 -->
     <servlet>

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <properties>
-        <property name="dialectClass" value="com.aode.dialect.MySql5Dialect"/>
+        <property name="dialectClass" value="com.blog.dialect.MySql5Dialect"/>
     </properties>
 
     <!-- 配置mybatis的缓存，延迟加载等等一系列属性 -->
@@ -60,7 +60,7 @@
     </settings>
 
     <typeAliases>
-        <package name="com.aode.model"/>
+        <package name="com.blog.model"/>
     </typeAliases>
 
     <!-- 分页插件 -->
