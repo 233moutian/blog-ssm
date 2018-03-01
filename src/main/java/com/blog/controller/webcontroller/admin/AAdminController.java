@@ -1,10 +1,11 @@
-package com.aode.controller.webcontroller.admin;
+package com.blog.controller.webcontroller.admin;
 
-import com.aode.been.AjaxResult;
-import com.aode.been.PageBean;
-import com.aode.model.Admin;
-import com.aode.service.AdminService;
-import com.aode.util.Encrypt;
+import com.blog.been.AjaxResult;
+import com.blog.been.PageBean;
+import com.blog.controller.webcontroller.BaseAdminController;
+import com.blog.model.Admin;
+import com.blog.service.AdminService;
+import com.blog.util.Encrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +25,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "admin/admin")
-public class AdminController extends BaseAdminController<Admin,Long> {
+public class AAdminController extends BaseAdminController<Admin,Long> {
 
     @Autowired
     private AdminService adminService;
