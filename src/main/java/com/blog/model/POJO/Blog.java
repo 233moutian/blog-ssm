@@ -15,11 +15,11 @@ public class Blog {
     private String title;
     private String summary;
     private Date releaseDate;
-    private int  clickDit;
-    private int replyHit;
+    private Integer clickHit;
+    private Integer replyHit;
     private String content;
     private Date createTime;
-    private Date updatetime;
+    private Date updateTime;
 
     public String getbId() {
         return bId;
@@ -27,6 +27,14 @@ public class Blog {
 
     public void setbId(String bId) {
         this.bId = bId;
+    }
+
+    public Long getaId() {
+        return aId;
+    }
+
+    public void setaId(Long aId) {
+        this.aId = aId;
     }
 
     public String getTitle() {
@@ -53,19 +61,19 @@ public class Blog {
         this.releaseDate = releaseDate;
     }
 
-    public int getClickDit() {
-        return clickDit;
+    public Integer getClickHit() {
+        return clickHit;
     }
 
-    public void setClickDit(int clickDit) {
-        this.clickDit = clickDit;
+    public void setClickHit(Integer clickHit) {
+        this.clickHit = clickHit;
     }
 
-    public int getReplyHit() {
+    public Integer getReplyHit() {
         return replyHit;
     }
 
-    public void setReplyHit(int replyHit) {
+    public void setReplyHit(Integer replyHit) {
         this.replyHit = replyHit;
     }
 
@@ -85,11 +93,11 @@ public class Blog {
         this.createTime = createTime;
     }
 
-    public Date getUpdatetime() {
-        return updatetime;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    public void setUpdatetime(Date updatetime) {
-        this.updatetime = updatetime;
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }

@@ -7,11 +7,11 @@
         <result column="title" property="title" jdbcType="VARCHAR" />
         <result column="summary" property="summary" jdbcType="VARCHAR" />
         <result column="release_date" property="releaseDate" jdbcType="DATE" />
-        <result column="click_hit" property="clickHit" jdbcType="VARCHAR" />
-        <result column="reply_hit" property="replyHit" jdbcType="VARCHAR" />
+        <result column="click_hit" property="clickHit" jdbcType="INTEGER" />
+        <result column="reply_hit" property="replyHit" jdbcType="INTEGER" />
         <result column="content" property="content" jdbcType="VARCHAR" />
         <result column="create_time" property="createTime" jdbcType="DATE" />
-        <result column="update_time" property="updatetime" jdbcType="DATE" />
+        <result column="update_time" property="updateTime" jdbcType="DATE" />
     </resultMap>
 
 </mapper>
