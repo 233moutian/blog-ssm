@@ -7,3 +7,5 @@
 ## 1.数据库名称：blog
 ## 2.数据库密码： 去application.properties里改成你们自己的就好
 ## 3. 不能提交的文件： .idea文件夹 、 .iml文件。
+
+## test
