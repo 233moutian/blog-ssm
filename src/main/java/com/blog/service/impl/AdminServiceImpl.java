@@ -6,6 +6,7 @@ import com.blog.model.Admin;
 import com.blog.service.AdminService;
 import com.blog.util.BaseMapper;
 import com.blog.util.Encrypt;
+import com.github.pagehelper.Page;
 import org.apache.commons.collections.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,7 +48,9 @@ public class AdminServiceImpl extends BaseServiceImpl<Admin> implements AdminSer
         }
         parameterMap.put("pageOffset", pageBean.getPageOffset());
         parameterMap.put("size", pageBean.getSize());
-        List<Admin> list  = adminMapper.selectAllAdmin(parameterMap);
+        List<Admin> list  = adminMapper.selectAllAdmin(parameterMap);   // 此方法实际上有分页
+
+
         int cout=adminMapper.countAll(parameterMap);
         pageBean.init(cout,list);
         Map<String,Object> map=new HashedMap();

@@ -20,6 +20,7 @@ public class ACommentController extends BaseAdminController<Comment,Long> {
 
     @RequestMapping("list")
     public String list(){
+        System.out.println(TEMPLATE_PATH+"list");
         return TEMPLATE_PATH+"list";
     }
 

@@ -1,5 +1,6 @@
 package com.blog.model.POJO;
 
+import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
@@ -10,8 +11,8 @@ import java.util.Date;
 @Table(name = "blog_comment")
 public class Comment {
     @Id
-    private String cId;
-    private String bId;
+    private String commentId;
+    private String blogId;
     private Integer floor;
     private String parentsId;
     private String commenter;
@@ -19,20 +20,20 @@ public class Comment {
     private Date createTime;
     private Date updatetime;
 
-    public String getcId() {
-        return cId;
+    public String getCommentId() {
+        return commentId;
     }
 
-    public void setcId(String cId) {
-        this.cId = cId;
+    public void setCommentId(String commentId) {
+        this.commentId = commentId;
     }
 
-    public String getbId() {
-        return bId;
+    public String getBlogId() {
+        return blogId;
     }
 
-    public void setbId(String bId) {
-        this.bId = bId;
+    public void setBlogId(String blogId) {
+        this.blogId = blogId;
     }
 
     public Integer getFloor() {

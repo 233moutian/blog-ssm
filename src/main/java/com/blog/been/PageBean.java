@@ -191,11 +191,13 @@ public class PageBean {
         this.searchText = searchText;
     }
 
+
     @Override
     public String toString() {
         return "PageBean{" +
                 "page=" + page +
                 ", size=" + size +
+                ", searchText='" + searchText + '\'' +
                 ", pageOffset=" + pageOffset +
                 ", recordCount=" + recordCount +
                 ", recordList=" + recordList +

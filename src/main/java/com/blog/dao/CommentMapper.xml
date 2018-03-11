@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.blog.dao.CommentMapper">
     <resultMap id="BaseResultMap" type="com.blog.model.POJO.Comment">
-        <id column="c_id" property="c_id" jdbcType="VARCHAR" />
-        <result column="b_id" property="bId" jdbcType="VARCHAR" />
+        <id column="comment_id" property="commentId" jdbcType="VARCHAR" />
+        <result column="bblog_id" property="blogId" jdbcType="VARCHAR" />
         <result column="floor" property="floor" jdbcType="INTEGER" />
         <result column="parents_id" property="parentsId" jdbcType="VARCHAR" />
         <result column="commenter" property="commenter" jdbcType="VARCHAR" />
